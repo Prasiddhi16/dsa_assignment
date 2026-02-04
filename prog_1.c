@@ -2,8 +2,8 @@
 #include<stdlib.h>
 #include<string.h>
 #define MAX 20
-int top=-1;
-char stack[MAX];
+int top=-1;//setting the stack as empty initially
+char stack[MAX];//declaring the stack array
 
 void push(char ch)
 {
@@ -12,7 +12,7 @@ void push(char ch)
         printf("The stack is overflown\n");
         return ;
     }
-    stack[++top]=ch;
+    stack[++top]=ch;//adding value at top after increasing  value of top
     return ;
 }
 char pop()
@@ -22,7 +22,7 @@ char pop()
         printf("The stack is empty\n");
         return '\0';
     }
-    char ch=stack[top--];
+    char ch=stack[top--];//returning the top value and decreasing the value of top
     return ch;
 }
 int balance(char *exp)
@@ -31,21 +31,21 @@ int balance(char *exp)
     int i;
     for(i=0;i<strlen(exp);i++)
     {
-        char ch=exp[i];
-        if(ch=='['||ch=='{'||ch=='(')
+        char ch=exp[i];//each character acessed
+        if(ch=='['||ch=='{'||ch=='(')//ignoring other characters and pushing starting brackets
         {
             push (ch);
         }
-        else if(ch==']'||ch=='}'||ch==')')
+        else if(ch==']'||ch=='}'||ch==')')//checking for ending brackets 
         {
-            char popvalue= pop();
+            char popvalue= pop();//poping the starting brackets
             if ((ch == ')' && popvalue != '(') ||(ch == ']' && popvalue != '[') ||(ch == '}' && popvalue != '{')) 
             {
                 return 0;
         }
     }
 }
-    return (top==-1);
+    return (top==-1);//as stack is empty when balanced
 
 }
 int main()
@@ -58,7 +58,7 @@ int main()
     for(int i=0;i<n;i++)
     {
         printf("Expressions: %s \n",exp[i]);
-        if(balance(exp[i]))
+        if(balance(exp[i]))//passing the expressions
         {
             printf("The expression is balanced\n");
 
