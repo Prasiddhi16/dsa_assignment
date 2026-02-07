@@ -1,4 +1,4 @@
-Documentation for program 2: Doubly Linked List Insert After and Delete  
+Documentation for program 4: Doubly Linked List Insert After and Delete  
 
 (A)Data Structures Defined  
 - A structure Node is defined with three fields  

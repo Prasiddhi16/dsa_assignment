@@ -1,4 +1,4 @@
-Program 2: Undirected Graph Traversal using Adjacency Matrix
+Program 5: Undirected Graph Traversal using Adjacency Matrix
 (A) Data Structures Defined
 - A global integer 2d array mat[max][max] is defined.
 - max is the maximum size of the matrix (10).
